@@ -1,0 +1,397 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(
+        135deg,
+        #edf8fb,
+        #dcecf1
+    );
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 790px;
+    min-height: 680px;
+
+    background: #eaf4f7;
+
+    border: 22px solid #214867;
+    border-radius: 17px;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.18),
+        inset 0 0 15px rgba(0, 0, 0, 0.08);
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+.header {
+    background: linear-gradient(
+        90deg,
+        #397da7,
+        #4388b2
+    );
+
+    height: 43px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 2;
+}
+
+.header h1 {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+
+.background-design {
+    position: absolute;
+
+    top: 43px;
+    left: 0;
+
+    width: 100%;
+    height: calc(100% - 43px);
+
+    background:
+        linear-gradient(
+            rgba(255, 255, 255, 0.45),
+            rgba(255, 255, 255, 0.65)
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent 0,
+            transparent 55px,
+            rgba(160, 195, 207, 0.18) 56px,
+            transparent 57px
+        );
+
+    opacity: 0.9;
+    z-index: 0;
+}
+
+
+.profile-card {
+    width: 294px;
+    max-width: calc(100% - 30px);
+
+    margin: 54px auto 38px;
+
+    background: rgba(247, 252, 253, 0.88);
+
+    border: 1px solid #a8c8d8;
+    border-top: 4px solid #3c83ae;
+
+    border-radius: 9px;
+
+    box-shadow:
+        0 4px 10px rgba(38, 80, 105, 0.25);
+
+    position: relative;
+    z-index: 1;
+
+    padding-top: 53px;
+}
+
+
+.profile-picture {
+    position: absolute;
+
+    top: -51px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 99px;
+    height: 99px;
+
+    border: 4px solid #e6a36e;
+    border-radius: 16px;
+
+    background: #dcecf3;
+
+    overflow: hidden;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.12);
+}
+
+.profile-picture img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.profile-card h2 {
+    text-align: center;
+
+    font-size: 17px;
+    color: #111;
+
+    margin-bottom: 5px;
+}
+
+
+.student-info {
+    padding: 0 16px;
+}
+
+.info-details {
+    margin-top: 5px;
+}
+
+.info-details p {
+    font-size: 10px;
+    line-height: 14px;
+    color: #111;
+}
+
+.info-details strong {
+    display: inline-block;
+    width: 82px;
+}
+
+
+.skills {
+    padding: 0 16px;
+    margin-top: 3px;
+}
+
+.skills h2 {
+    margin-bottom: 4px;
+}
+
+.skills ul {
+    padding-left: 15px;
+}
+
+.skills li {
+    font-size: 10px;
+    line-height: 13px;
+}
+
+.academic-grades {
+    padding: 0 16px;
+    margin-top: 4px;
+}
+
+.academic-grades h2 {
+    margin-bottom: 4px;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 10px;
+    color: #111;
+}
+
+th,
+td {
+    border: 1px solid #9baab0;
+
+    padding: 3px 4px;
+
+    text-align: center;
+}
+
+th {
+    background: #d7e4e9;
+    font-weight: bold;
+}
+
+td:nth-child(2) {
+    text-align: left;
+}
+
+.contact-section {
+    padding: 0 16px;
+    margin-top: 7px;
+}
+
+.contact-section h2 {
+    margin-bottom: 5px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 6px;
+}
+
+.form-group label {
+    width: 58px;
+
+    font-size: 10px;
+    color: #111;
+
+    flex-shrink: 0;
+}
+
+.form-group input,
+.form-group textarea {
+    flex: 1;
+
+    width: 100%;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+
+    border: 1px solid #aab8bd;
+    border-radius: 5px;
+
+    background: white;
+
+    padding: 4px 7px;
+
+    outline: none;
+}
+
+.form-group input {
+    height: 20px;
+}
+
+.form-group textarea {
+    height: 40px;
+
+    resize: vertical;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #3980a9;
+
+    box-shadow: 0 0 3px rgba(57, 128, 169, 0.4);
+}
+
+button {
+    display: block;
+
+    margin: 9px auto 7px;
+
+    padding: 5px 16px;
+
+    background: linear-gradient(
+        180deg,
+        #f4b07c,
+        #ed985d
+    );
+
+    border: 1px solid #dc965f;
+    border-radius: 15px;
+
+    color: #222;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 2px 4px rgba(0, 0, 0, 0.15);
+
+    transition: 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(
+        180deg,
+        #f8bd8d,
+        #e99355
+    );
+
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+.footer {
+    background: rgba(209, 227, 236, 0.9);
+
+    margin-top: 0;
+
+    padding: 5px;
+
+    text-align: center;
+}
+
+.footer a {
+    color: #111;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    text-decoration: underline;
+}
+
+.footer a:hover {
+    color: #2c78a3;
+}
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .main-container {
+        border-width: 10px;
+        border-radius: 14px;
+    }
+
+    .header h1 {
+        font-size: 19px;
+    }
+
+    .profile-card {
+        width: 100%;
+        max-width: 294px;
+    }
+
+}
+
+@media (max-width: 350px) {
+
+    .profile-card {
+        max-width: 100%;
+    }
+
+    .header h1 {
+        font-size: 17px;
+    }
+
+    .form-group label {
+        width: 53px;
+    }
+
+}
